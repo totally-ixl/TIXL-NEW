@@ -1,0 +1,45 @@
+html,
+body {
+  text-align: center;
+}
+
+.feather {
+  width: 30px;
+  height: 30px;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+#fullscreenBtn {
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  background: #a45ee5;
+  font-size: 20px;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
+  cursor: pointer;
+  transition: 200ms ease;
+  text-align: center;
+}
+
+#fullscreenBtn:hover {
+  transform: scale(1.1);
+}
+
+#gameFrame {
+  border: 0px;
+  border-radius: 20px;
+  width: 75%;
+  aspect-ratio: 45/26;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
+  transition: 0.3s ease-in-out;
+}
