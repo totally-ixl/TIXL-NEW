@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    
+  </head>
+  <body>
+
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <div class="swf" dir="ltr" style="text-align: left;" trbid="on">
+      <embed height="480" src="" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%">
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const embedElement = document.querySelector("embed");
+        if (embedElement) {
+          const currentFileName = window.location.pathname.split("/").pop().split(".")[0];
+          embedElement.src = "game/swf/" + `${currentFileName}.swf`;
+        }
+      });
+    </script>
+
+  </body>
+</html>
