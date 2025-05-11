@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script src="https://cdn.jsdelivr.net/gh/totally-ixl/waFLASH@main/waflash.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const embedElement = document.querySelector("embed");
+        if (embedElement) {
+          // Get the current HTML filename without the.html extension
+          const currentFileName = window.location.pathname.split("/").pop().split(".")[0];
+          
+          // Assuming the SWF files are located in a directory named 'game/swf'
+          const swfPath = 'swf/';
+          
+          // Set the src attribute to the SWF file
+          embedElement.src = swfPath + currentFileName + '.swf';
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="swf" dir="ltr" style="text-align: left;">
+      <embed height="480" src="" style="overflow:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" width="100%">
+    </div>
+  </body>
+</html>
